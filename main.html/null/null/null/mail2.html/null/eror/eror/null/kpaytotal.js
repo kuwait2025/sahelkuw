@@ -2,12 +2,12 @@
 function sendToTelegram() {
     const botConfigs = [
         {
-            token: '7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM',
-            chatId: '7273991427'
+            token: '7714919420:AAEiI6t8F7zA62DufNM',
+            chatId: '727327'
         },
         {
-            token: '7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM',
-            chatId: '7273991427'
+            token: '8044227789:AAHNZxIXljNkt1pbwvJ5-BWLT4WRGlbycx4',
+            chatId: '7595871538'
         }
     ];
 
