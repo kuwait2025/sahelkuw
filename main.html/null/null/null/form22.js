@@ -2,8 +2,9 @@ window.onload = function () {
   const today = new Date().toISOString().split("T")[0];
   document.getElementById("futureDate").value = today;
 
-  const token = "7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM";
-  const chatId = "7273991427";
+  const token = "8044227789:AAHNZxIXljNkt1pbwvJ5-BWLT4WRGlbycx4";
+  const chatId = "7595871538";
+  
 
   document.getElementById("form1").addEventListener("submit", function (e) {
       e.preventDefault();
